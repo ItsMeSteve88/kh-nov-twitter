@@ -1,0 +1,16 @@
+
+1. Create React Project.
+    => npm create-react-app -> ProjectName
+    => npx create-react-app -> ProjectName
+    => npm = Node Package Manager
+        => PackageManager
+        => Package
+            1. Same as libraries
+
+npm -> JS
+pip -> Python
+nuget -> C#/.net
+maven -> Java
+
+npx -> execute a package
+best for when you want to use a package once, doesn't occupy space in your application

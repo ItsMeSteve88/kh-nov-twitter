@@ -1,0 +1,5 @@
+
+1. Understand what react is
+2. Install Node JS
+3. Create a React Project
+    
