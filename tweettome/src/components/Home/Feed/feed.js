@@ -2,7 +2,7 @@
 
 function Feed()
 {
-    return <h4>Feed</h4>
+    return <h2>Home</h2>
 }
 
 export default Feed;
