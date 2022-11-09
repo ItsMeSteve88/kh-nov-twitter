@@ -14,3 +14,8 @@ maven -> Java
 
 npx -> execute a package
 best for when you want to use a package once, doesn't occupy space in your application
+
+Folder structure
+    SRC => contains your source code.
+
+React -> APP [JS[html], css] 

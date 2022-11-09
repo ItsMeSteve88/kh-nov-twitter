@@ -1,0 +1,21 @@
+
+.home  {
+    display: flex;
+    height: 100%;
+    /* 100% of parent */
+}
+
+.leftContainer {
+    width: 25%;
+
+}
+
+.centerContainer{
+    width: 45%;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.rightContainer{
+    width: 30%;
+}
