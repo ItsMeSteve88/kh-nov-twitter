@@ -1,36 +1,29 @@
-.twitterIcon {
-    width: 30px ; 
-    height: 30px ;
-    margin: 0px ;
-    padding-top: 20px ;
-    color: var(--twitter-color);
-    margin-left: 44% ;
-    margin-bottom: 15px;
+img{
+    width:30px;
+
 }
 
+ul{
+    margin-top: 12px !important;
+    margin-left: 58px;
+    height: 140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
 
-.tweetButton {
-    width: 50%;
-    height: 50px;
-    background-color: var(--twitter-color);
-    color: white;
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration:none !important;
+    color: black !important;
+    display: flex;
+    align-items: center;
+}
+
+.option{
     font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 40%;
+    font-weight: 700;
 }
-
-.tweetButton:hover {
-    background-color: #30a7f1;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
