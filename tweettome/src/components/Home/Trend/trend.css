@@ -1,0 +1,24 @@
+
+.trend{
+    padding: 12px;
+}
+
+.trend:hover {
+    background-color: #f5f8fa;
+    
+}
+
+.header, .reTweets {
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: gray;
+}
+
+.trend-text {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+

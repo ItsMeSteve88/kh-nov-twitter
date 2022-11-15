@@ -1,0 +1,34 @@
+[
+    {
+        "header": "Sports",
+        "text": "#IPLRetention",
+        "retweets": "1,100 tweets"
+    },
+    {
+        "header": "Sports . Trending",
+        "text": "Beckham",
+        "retweets": "10,9K Tweets"
+    },
+    {
+        "header": "Politics . Trending",
+        "text": "Lisa Nandy",
+        "retweets": "1,048 Tweets"
+    },
+    {
+        "header": "Trending in United Kingdom",
+        "text": "Prince of Wales",
+        "retweets": "Trending with #notmyprince"
+    },
+    {
+        "header": "Events . Trending",
+        "text": "Black Friday",
+        "retweets": "57.4K Tweets"
+    },
+    {
+        "header": "Television . Last night",
+        "text": "WWE Monday Night RAW",
+        "retweets": ""
+    }
+    
+    
+]

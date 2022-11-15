@@ -11,16 +11,16 @@ body {
 }
 
 .leftContainer {
-    width: 25%;
+    width: 36%;
 
 }
 
 .centerContainer{
-    width: 45%;
+    width: 25%;
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
 }
 
 .rightContainer{
-    width: 30%;
+    width: 36%;
 }
