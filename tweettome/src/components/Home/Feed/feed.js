@@ -2,8 +2,32 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import "./feed.css";
 import Trend from "../Trend/trend";
+import {useState, useEffect} from "react";
 
-function Feed() {
+function Feed()
+{
+  // name of variable, setter function, initial value.
+  // used to set a state variable, to be used in the component as it changes lifecycle.
+  // refreshes the component when the state variable changes.
+  const[trendData, setTrends] = useState([]);
+  
+  // read data from the json file/api/os/external sources.
+  // fetch function takes some time to communicate with external sources.
+  // useeffect is used to run the function only once when the component is loaded. and stop running it again, and again
+  // manages side effects and dependencies.
+  useEffect(
+    () =>{
+    fetch("trend.json")
+      // convert the data into json format
+      .then((response) => response.json())
+      // use the data - printed on console
+      .then((response) =>
+      {
+        setTrends(response);
+      });
+    }, []);
+  // []=> can include state variables, if they change, the function will run again.
+
   return (
     <div className="feed-main">
       {/* Search Box */}
@@ -14,7 +38,7 @@ function Feed() {
             width="16"
             height="16"
             fill="currentColor"
-            class="bi bi-search"
+            className="bi bi-search"
             viewBox="0 0 16 16"
           >
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -26,7 +50,7 @@ function Feed() {
           width="20"
           height="20"
           fill="currentColor"
-          class="bi bi-gear"
+          className="bi bi-gear"
           viewBox="0 0 16 16"
         >
           <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
@@ -36,28 +60,44 @@ function Feed() {
       {/* feed body */}
       <nav>
         <ul className="menus">
-          <li><a href="#"></a>For you</li>
-          <li><a href="#"></a>Trending</li>
-          <li><a href="#"></a>News</li>
-          <li><a href="#"></a>Sports</li>
-          <li><a href="#"></a>Entertainment</li>
+          <li>
+            <a href="#"></a>For you
+          </li>
+          <li>
+            <a href="#"></a>Trending
+          </li>
+          <li>
+            <a href="#"></a>News
+          </li>
+          <li>
+            <a href="#"></a>Sports
+          </li>
+          <li>
+            <a href="#"></a>Entertainment
+          </li>
         </ul>
       </nav>
-      
+
       {/* banner */}
       <div className="banner">
         <p className="tag">War in Ukraine. LIVE</p>
         <p className="text">Latest updates on the war in Ukraine</p>
       </div>
       {/* Trends */}
-      <Trend/>
-      <Trend/>
-      <Trend/>
-      <Trend/>
-      <Trend/>
-      <Trend/>
-      <Trend/>
-
+      
+      {
+        trendData.length>0 &&
+      <Trend 
+      header={trendData[3].header} 
+      text={trendData[3].text}
+      retweets={trendData[3].retweets} />
+    }
+      <Trend />
+      <Trend />
+      <Trend />
+      <Trend />
+      <Trend />
+      <Trend />
     </div>
   );
 }

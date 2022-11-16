@@ -48,7 +48,7 @@
     padding: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     height: 320px;
     width: 100%;
     background-image: url(https://pbs.twimg.com/semantic_core_img/1579454614277181440/b-ZGeQ4X?format=jpg&name=small);
