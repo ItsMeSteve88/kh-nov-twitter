@@ -10,7 +10,7 @@ function Feed() {
   // used to set a state variable, to be used in the component as it changes lifecycle.
   // refreshes the component when the state variable changes.
   const [trendData, setTrends] = useState([]);
-
+  const [tweetData, setTweets] = useState([]);
   // read data from the json file/api/os/external sources.
   // fetch function takes some time to communicate with external sources.
   // useeffect is used to run the function only once when the component is loaded. and stop running it again, and again
@@ -26,6 +26,13 @@ function Feed() {
   }, []);
   // []=> can include state variables, if they change, the function will run again.
 
+  useEffect(() => {
+    fetch("tweet.json")
+      .then((response) => response.json())
+      .then((response) => {
+        setTweets(response);
+      });
+  }, []);
   return (
     <div className="feed-main">
       {/* Search Box */}
@@ -88,7 +95,9 @@ function Feed() {
       ))}
 
       {/* Tweet */}
-      <Tweet />
+      {tweetData.map((data) => (
+        <Tweet content={data} />
+      ))}
     </div>
   );
 }

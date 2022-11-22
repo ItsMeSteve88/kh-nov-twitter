@@ -18,5 +18,26 @@
         "comments":"371", 
         "retweets":"543",
         "likes":"5,216"
+    },
+    {
+        "avatar":"https://pbs.twimg.com/profile_images/1592803402291056640/2EGt4J_1_400x400.jpg",
+        "name":"433",
+        "handle":"@433 . 16 h",
+        "text":"Who impressed you most so far ⁉️✨",
+        "image":"https://pbs.twimg.com/media/FiH6sQYXoA4TD8H?format=jpg&name=small",
+        "comments":"1,630", 
+        "retweets":"2,992",
+        "likes":"68.3K"
+    },
+    {
+        "avatar":"https://pbs.twimg.com/profile_images/1588901119001915392/rlvwK197_400x400.jpg",
+        "name":"Charles Hoskinson",
+        "handle":"@IOHK_Charles . 17h",
+        "text":"Good meditation to close out the night. Thanks for all the memories and good times, Switzerland. I'm heading back to Colorado",
+        "image":"https://pbs.twimg.com/media/FiH3h3GWIAAWw4M?format=jpg&name=medium",
+        "comments":"102", 
+        "retweets":"49",
+        "likes":"896"
     }
+    
 ]

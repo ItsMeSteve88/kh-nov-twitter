@@ -1,5 +1,6 @@
 .tweet {
     padding: 12px;
+    border: 1px rgb(246, 246, 246) solid;
 }
 
 .tweet:hover:hover {
