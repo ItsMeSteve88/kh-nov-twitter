@@ -4,11 +4,19 @@ import Feed from '../../components/Home/Feed/feed';
 import LoginOption from '../../components/Home/LoginOption/LoginOption';
 
 
-function Home() {
+function Home()
+{
+    
+    function newTweetReceived(newTweet)
+  {
+      console.log("New Tweet Received for home");
+      console.log(newTweet);
+    }
+    
     return (
         <div className="home">
             <div className='leftContainer'>
-                <Logo />
+                <Logo notifyNewTweet={newTweetReceived} />
             </div>
             <div className='centerContainer'>
                 <Feed />

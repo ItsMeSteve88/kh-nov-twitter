@@ -1,6 +1,16 @@
 import "./logo.css";
+import NewTweet from "../NewTweet/NewTweet";
 
-function Logo() {
+function Logo(props)
+{
+  
+  function newTweetReceived(newTweet)
+  {
+    console.log("New Tweet Received for logo");
+    console.log(newTweet);
+    props.notifyNewTweet(newTweet);
+  }
+
   return (
     <div className="options">
       <ul>
@@ -30,7 +40,26 @@ function Logo() {
             &nbsp; Settings
           </a>
         </li>
+        <li>
+          <button
+            type="button"
+            className="btn-tweet"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Tweet
+          </button>
+        </li>
       </ul>
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <NewTweet notifyNewTweet={newTweetReceived} />
+      </div>
     </div>
   );
 }
