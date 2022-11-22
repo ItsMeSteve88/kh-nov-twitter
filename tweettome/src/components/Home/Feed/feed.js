@@ -2,30 +2,28 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import "./feed.css";
 import Trend from "../Trend/trend";
-import {useState, useEffect} from "react";
+import Tweet from "../Tweet/tweet";
+import { useState, useEffect } from "react";
 
-function Feed()
-{
+function Feed() {
   // name of variable, setter function, initial value.
   // used to set a state variable, to be used in the component as it changes lifecycle.
   // refreshes the component when the state variable changes.
-  const[trendData, setTrends] = useState([]);
-  
+  const [trendData, setTrends] = useState([]);
+
   // read data from the json file/api/os/external sources.
   // fetch function takes some time to communicate with external sources.
   // useeffect is used to run the function only once when the component is loaded. and stop running it again, and again
   // manages side effects and dependencies.
-  useEffect(
-    () =>{
+  useEffect(() => {
     fetch("trend.json")
       // convert the data into json format
       .then((response) => response.json())
       // use the data - printed on console
-      .then((response) =>
-      {
+      .then((response) => {
         setTrends(response);
       });
-    }, []);
+  }, []);
   // []=> can include state variables, if they change, the function will run again.
 
   return (
@@ -81,23 +79,16 @@ function Feed()
       {/* banner */}
       <div className="banner">
         <p className="tag">War in Ukraine. LIVE</p>
-        <p className="text">Latest updates on the war in Ukraine</p>
+        <p className="banner-text">Latest updates on the war in Ukraine</p>
       </div>
       {/* Trends */}
-      
-      {
-        trendData.length>0 &&
-      <Trend 
-      header={trendData[3].header} 
-      text={trendData[3].text}
-      retweets={trendData[3].retweets} />
-    }
-      <Trend />
-      <Trend />
-      <Trend />
-      <Trend />
-      <Trend />
-      <Trend />
+
+      {trendData.map((data) => (
+        <Trend content={data} />
+      ))}
+
+      {/* Tweet */}
+      <Tweet />
     </div>
   );
 }

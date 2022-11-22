@@ -1,0 +1,82 @@
+.tweet {
+    padding: 12px;
+}
+
+.tweet:hover:hover {
+    background-color: #f5f8fa;
+    
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.header{
+    display: flex;
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: gray;
+}
+
+.name{
+    font-weight: 700;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    color: black;
+}
+
+
+span.handle{
+    margin-left: 4px;
+    margin-right: 85px;
+    color: gray;
+    font-weight: 400;
+}
+
+.offical {
+    display: flex;
+    justify-items: center;
+    color: grey;
+    font-weight: 400; 
+}
+
+.offical > p {
+    padding-top: 2px;
+    margin-bottom: 0px;
+}
+
+.text{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    color: black;
+    width: 85%;
+}
+
+.image {
+    display: block;
+    width: 85%;
+    margin: auto; 
+    margin-left: 60px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin-left: 60px;
+}
+
+.icon-text {
+    color: gray;
+    font-size: 13px;
+}
