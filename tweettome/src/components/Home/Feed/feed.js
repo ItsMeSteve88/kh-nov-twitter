@@ -5,7 +5,17 @@ import Trend from "../Trend/trend";
 import Tweet from "../Tweet/tweet";
 import { useState, useEffect } from "react";
 
-function Feed() {
+function Feed(props)
+{
+  console.log(props.tweets);
+  const [alltweets, setTwets] = useState([]);
+
+  useEffect(() =>
+  {
+    setTwets(props.tweets);
+  }, [props.tweets]);
+
+  console.log(props.tweets);
   // name of variable, setter function, initial value.
   // used to set a state variable, to be used in the component as it changes lifecycle.
   // refreshes the component when the state variable changes.
@@ -96,6 +106,9 @@ function Feed() {
 
       {/* Tweet */}
       {tweetData.map((data) => (
+        <Tweet content={data} />
+      ))}
+      {alltweets.map((data) => (
         <Tweet content={data} />
       ))}
     </div>

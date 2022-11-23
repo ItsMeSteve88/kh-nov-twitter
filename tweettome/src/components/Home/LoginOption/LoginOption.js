@@ -1,6 +1,16 @@
 import "./LoginOption.css";
+import LoginForm from "./LoginForm";
 
-function LoginOption() {
+function LoginOption(props)
+{
+  
+
+  function newUser(username, email, password, cpass) {
+    console.log("this is the form component");
+    console.log(username, email, password, cpass);
+    props.saveNewUser(username, email, password, cpass);
+  }
+
   return (
     <div className="card">
       <div className="card-body">
@@ -53,9 +63,27 @@ function LoginOption() {
           </svg>
           <span> &nbsp;&nbsp;Sign up with Apple</span>
         </button>
-        <button className="btn btn-primary fw-bold">
-          Sign up with phone or email
-        </button>
+        <div>
+          <button
+            type="button"
+            className="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            Sign up with phone or email
+          </button>
+
+          <div
+            className="modal fade"
+            id="loginModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <LoginForm saveNewUser={newUser} />
+          </div>
+        </div>
+
         <p className="termsText">
           By signing up, you agree to the{" "}
           <a className="termsLink" href="google.com">
@@ -71,6 +99,7 @@ function LoginOption() {
           </a>
         </p>
       </div>
+      {/* <LoginForm saveNewUser={newUser} /> */}
     </div>
   );
 }
