@@ -1,0 +1,158 @@
+.profile-nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 12px;
+    padding-left: 12px;
+    height: 50px;
+}
+
+.profile-nav_info p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+transform: translateY(-10px);
+}
+
+
+p.tweets {
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+    transform: translateY(-14px);
+}
+
+
+
+.banner-pic {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 200px;
+    width: 100%;
+    background-image: url(https://media.evo.co.uk/image/private/s--dq4_PCEw--/v1600444715/evo/2020/09/Porsche%20911%20RSR%20v%20GT3%C2%A0R%20v%20GT3%C2%A0Cup-2.jpg);
+    /* background-image: url(http://s3.amazonaws.com/gt7sp-prod/livery/76/51/26/5773689560089265176_23.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 14%;
+    width: 130px;
+    height: 130px; 
+    background-image: url(https://external-preview.redd.it/7Wt4MSRpBEb0LeoyxfE1_Vri9Yd816UIaD08QJF-xEg.jpg?auto=webp&s=b49e860a85e7e782aa3cac89cce137b030ae9fd3);
+    
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+
+}
+
+/* main profile content */
+.profile-main {
+    margin-top: 65px;
+    padding: 12px;
+}
+
+.profile-main .user {
+    font-weight: 700;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    color: black;
+}
+
+.profile-main .handle {
+    color: gray;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.profile-main .description {
+    font-weight: 400;
+}
+
+span.tags {
+    color: #50b7f5;
+    font-weight: 500;
+}
+
+p.handle {
+    margin-bottom: 6px;
+}
+
+p.description {
+    margin-bottom: 5px;
+}
+
+.site-date {
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-flex;
+    
+}
+
+
+.site-date a {
+    margin-right: 20px;
+    color: #50b7f5 !important;
+    font-weight: 500
+}
+
+.site-date a:hover {
+    
+    color: #50b7f5 !important;
+    font-weight: 500;
+    text-decoration: underline !important;
+}
+
+.site-date p {
+    margin-bottom: 0px;
+}
+
+.site-date span {
+    margin-top: 2px;
+}
+
+.following {
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.following span {
+    margin-left: 40px;
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+span.fnumbers {
+    margin-left: 0;
+    font-weight: 700;
+    color: black;
+}
+
+.following p {
+    margin-bottom: 8px;
+}
+
+.following p.followback {
+    font-size: 12px;
+}
+
+/* body */
+
+.profile-menus {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6px !important;
+    padding: 0px 50px;
+    height: fit-content;
+    color: gray;
+    font-weight: 400;
+    border-bottom: 1px solid lightgray;
+}
